@@ -5,14 +5,18 @@ import entity.ContactEntity
 class ContactRepository {
 
     companion object {
-        private val list = mutableListOf<ContactEntity>()
+        private val contactList = mutableListOf<ContactEntity>()
 
         fun save(contact: ContactEntity) {
-            list.add(contact)
+            contactList.add(contact)
         }
 
         fun delete(contact: ContactEntity) {
 
+        }
+
+        fun getList(): List<ContactEntity> {
+            return contactList
         }
     }
 
